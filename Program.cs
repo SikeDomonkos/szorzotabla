@@ -1,0 +1,35 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.IO;
+
+namespace ConsoleApp9
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string folderPath = @"C:\0130";
+            if (!Directory.Exists(folderPath))
+            {
+                Directory.CreateDirectory(folderPath);
+                Console.WriteLine(folderPath);
+            }
+            StreamWriter html = new StreamWriter(@"C:\0130\index.html");
+            html.WriteLine("<!DOCTYPE html>\r\n<html lang=\"hu\">\r\n    <head>\r\n        <meta charset=\"UTF-8\">\r\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n        <title>Szorzótábla</title>\r\n\r\n        <style>\r\n            body{\r\n                background-color: blue;\r\n            }\r\n            table{\r\n                color: white; \r\n                top:50%; \r\n                left:50%; \r\n                position:absolute; \r\n                margin-top:-260px; \r\n                " +
+                "margin-left:-274px;\r\n                border: 1px solid white; \r\n                border-collapse: collapse;\r\n            }\r\n            td{\r\n                padding: 12px; \r\n                text-align: center\r\n            }\r\n            th{\r\n                font-size: 25px\r\n            }\r\n            .bold{\r\n                font-weight: bold; \r\n                font-size: 20px\r\n            }\r\n        </style>\r\n    </head>\r\n    <body>\r\n        <table border=\"1px\";>\r\n            <thead>\r\n                <tr>\r\n                    <th colspan=\"10\">\r\n                        10 * 10 Szorzótábla\r\n                    " +
+                "</th>\r\n                </tr>\r\n            </thead>\r\n            <tbody>\r\n                <tr class=\"bold\"> \r\n                    <td>1</td>\r\n                    <td>2</td>\r\n                    <td>3</td>\r\n                    <td>4</td>\r\n                    <td>5</td>\r\n                    <td>6</td>\r\n                    <td>7</td>\r\n                    <td>8</td>\r\n                    <td>9</td>\r\n                    <td>10</td>\r\n                </tr>\r\n            \r\n                <tr>\r\n                    <td class=\"bold\">2</td>\r\n                    <td>4</td>\r\n                    <td>6</td>\r\n                    <td>8</td>\r\n  " +
+                "                  <td>10</td>\r\n                    <td>12</td>\r\n                    <td>14</td>\r\n                    <td>16</td>\r\n                    <td>18</td>\r\n                    <td>20</td>\r\n                </tr>\r\n            \r\n                <tr>\r\n                        <td class=\"bold\">3</td>\r\n                        <td>6</td>\r\n                        <td>9</td>\r\n                        <td>12</td>\r\n                        <td>15</td>\r\n                        <td>18</td>\r\n                        <td>21</td>\r\n                        <td>24</td>\r\n                        <td>27</td>\r\n                        <td>30</td>\r\n              " +
+                "  </tr>\r\n            \r\n                <tr>\r\n                        <td class=\"bold\">4</td>\r\n                        <td>8</td>\r\n                        <td>12</td>\r\n                        <td>16</td>\r\n                        <td>20</td>\r\n                        <td>24</td>\r\n                        <td>28</td>\r\n                        <td>32</td>\r\n                        <td>36</td>\r\n                        <td>40</td>\r\n                </tr>\r\n            \r\n                <tr>\r\n                        <td class=\"bold\">5</td>\r\n                        <td>10</td>\r\n                        <td>15</td>\r\n                        <td>20</td>\r\n    " +
+                "                    <td>25</td>\r\n                        <td>30</td>\r\n                        <td>35</td>\r\n                        <td>40</td>\r\n                        <td>45</td>\r\n                        <td>50</td>\r\n                </tr>\r\n            \r\n                <tr>\r\n                        <td class=\"bold\">6</td>\r\n                        <td>12</td>\r\n                        <td>18</td>\r\n                        <td>24</td>\r\n                        <td>30</td>\r\n                        <td>36</td>\r\n                        <td>42</td>\r\n                        <td>48</td>\r\n                        <td>54</td>\r\n                        <td>60</td>\r\n     " +
+                "           </tr>\r\n            \r\n                <tr>\r\n                        <td class=\"bold\">7</td>\r\n                        <td>14</td>\r\n                        <td>21</td>\r\n                        <td>28</td>\r\n                        <td>35</td>\r\n                        <td>42</td>\r\n                        <td>49</td>\r\n                        <td>56</td>\r\n                        <td>63</td>\r\n                        <td>70</td>\r\n                </tr>\r\n            \r\n                <tr>\r\n                        <td class=\"bold\">8</td>\r\n                        <td>16</td>\r\n                        <td>24</td>\r\n                        <td>32</td>\r\n                        <td>40</td>\r\n                    " +
+                "    <td>48</td>\r\n                        <td>56</td>\r\n                        <td>64</td>\r\n                        <td>72</td>\r\n                        <td>80</td>\r\n                </tr>\r\n            \r\n                <tr>\r\n                        <td class=\"bold\">9</td>\r\n                        <td>18</td>\r\n                        <td>27</td>\r\n                        <td>36</td>\r\n                        <td>45</td>\r\n                        <td>54</td>\r\n                        <td>63</td>\r\n                        <td>72</td>\r\n                        <td>81</td>\r\n                        <td>90</td>\r\n                </tr>\r\n            \r\n                <tr>\r\n                        <td class=\"bold\">10</td>\r\n        " +
+                "                <td>20</td>\r\n                        <td>30</td>\r\n                        <td>40</td>\r\n                        <td>50</td>\r\n                        <td>60</td>\r\n                        <td>70</td>\r\n                        <td>80</td>\r\n                        <td>90</td>\r\n                        <td>100</td>\r\n                </tr>\r\n            </table>\r\n        </tbody>\r\n <!-- Készítette: Zelenák Zalán Noel, Hilóczki Tamás -->\r\n   </body>\r\n</html>");
+
+            html.Close();
+            System.Diagnostics.Process.Start(@"C:\0130\index.html");
+        }
+    }
+}
